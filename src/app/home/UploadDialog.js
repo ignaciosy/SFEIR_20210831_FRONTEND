@@ -37,7 +37,7 @@ const UploadDialog = ({ open, setOpen, categories }) => {
     const [selectedCategoryId, setselectedCategoryId] = useState('');
     const [files, setFiles] = useState(null);
 
-    const [uploadVideo, { data, loading, error }] = useMutation(UPLOAD_VIDEO, {
+    const [uploadVideo, { loading }] = useMutation(UPLOAD_VIDEO, {
         context: { hasUpload: true },
         refetchQueries: [FETCH_CATEGORIES]
     });

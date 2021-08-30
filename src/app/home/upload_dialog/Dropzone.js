@@ -29,11 +29,6 @@ const Dropzone = ({ files, setFiles }) => {
         setOpen(false);
     };
 
-    const handleUpload = () => {
-        console.log("upload!!");
-        handleClose();
-    };
-
     const { getRootProps, getInputProps } = useDropzone({
         accept: 'video/mp4, video/mov',
         maxFiles: 1,
