@@ -7,6 +7,9 @@ const useStyles = makeStyles({
     card: {
         margin: "2rem",
         backgroundColor: "lightcyan",
+    },
+    cardHeader: {
+        borderBottom: "1px solid grey"
     }
 });
 
@@ -20,7 +23,7 @@ const Categories = ({ categories }) => {
             variant="outlined"
             className={classes.card}
         >
-            <CardHeader title={category.name} />
+            <CardHeader title={category.name} className={classes.cardHeader} />
             <CardContent>
                 <Videos videos={category.videos} />
             </CardContent>

@@ -12,6 +12,6 @@ describe('<Home />', () => {
     });
 
     it("displays title", async () => {
-        await waitFor(() => wrapper.getByText("Video list"));
+        await waitFor(() => wrapper.getByText("Example Video List"));
     });
 });

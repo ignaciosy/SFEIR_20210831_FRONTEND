@@ -24,6 +24,7 @@ const Home = () => {
         error && <div>Something went wrong fetching the data :(</div> ||
         loading && <CircularProgress /> || (
             <>
+                <h1>Example Video List</h1>
                 <Button
                     color="primary"
                     variant="contained"

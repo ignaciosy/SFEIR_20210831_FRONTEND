@@ -1,6 +1,4 @@
 import React from "react";
-import clsx from "clsx";
-import { Card, CardHeader, CardContent } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -9,17 +7,25 @@ const useStyles = makeStyles({
         marginBottom: "0.3rem"
     },
     container: {
-        width: "50vw",
-        height: "40vh",
-        marginBottom: "0.8rem"
+        height: "35vh",
+        minWidth: "40vw",
+        maxWidth: "90%"
+    },
+    list: {
+        display: "flex",
+        flexWrap: "wrap"
+    },
+    item: {
+        flexGrow: 1,
+        margin: "0.8rem"
     }
 });
 
 const Videos = ({ videos = [] }) => {
     const classes = useStyles();
 
-    return <ul>{videos?.map(video => (
-        <li key={`video-${video.id}`}>
+    return <div className={classes.list}>{videos?.map(video => (
+        <div key={`video-${video.id}`} className={classes.item}>
             <div className={classes.title}>{video.title}</div>
             <div className={classes.container}>
                 <video
@@ -34,8 +40,8 @@ const Videos = ({ videos = [] }) => {
                     <source src={`http://localhost:3001${video.url}`} type="video/mp4" />
                 </video>
             </div>
-        </li>
-    ))}</ul>;
+        </div>
+    ))}</div>;
 };
 
 export default Videos;
