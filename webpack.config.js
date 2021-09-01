@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: "development",
-    entry: [path.join(__dirname, "src", "App.js")],
+    entry: ["regenerator-runtime/runtime.js", path.join(__dirname, "src", "App.js")],
     output: {
         path: path.join(__dirname, '/dist'),
         publicPath: '/',

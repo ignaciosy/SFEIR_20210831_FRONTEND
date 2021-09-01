@@ -36,6 +36,7 @@ const Videos = ({ videos = [] }) => {
                     height="100%"
                     // poster="MY_VIDEO_POSTER.jpg"
                     data-setup="{'fluid': true}"
+                    data-testid={`video-${video.id}`}
                 >
                     <source src={`http://localhost:3001${video.url}`} type="video/mp4" />
                 </video>

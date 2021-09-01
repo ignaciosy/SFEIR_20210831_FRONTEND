@@ -7,7 +7,10 @@ Small React app featuring a video library example project, connected to [this Ra
 1. `npm install`
 2. `npm run start`
 
+## Running tests
+
+`npm test -- Home --watch`
+
 ## Next steps
 
-- Adding tests
 - Improve UI

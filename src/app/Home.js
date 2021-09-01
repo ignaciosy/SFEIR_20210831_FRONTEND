@@ -22,7 +22,7 @@ const Home = () => {
 
     return (
         error && <div>Something went wrong fetching the data :(</div> ||
-        loading && <CircularProgress /> || (
+        loading && <CircularProgress data-testid="loading wheel" /> || (
             <>
                 <h1>Example Video List</h1>
                 <Button
